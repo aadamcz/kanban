@@ -1,6 +1,8 @@
 /**
  * Root Reducer
  */
+import lanes from './modules/Lane/LaneReducer';
+import notes from './modules/Note/NoteReducer';
 import { combineReducers } from 'redux';
 
 // Import Reducers
@@ -13,4 +15,6 @@ export default combineReducers({
   app,
   posts,
   intl,
+  lanes,
+  notes,
 });
