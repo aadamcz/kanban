@@ -7,11 +7,9 @@ const initialState = {};
 
 export default function lanes(state = initialState, action) {
  switch (action.type) {
-   switch (action.type) {
   case CREATE_LANE:
   case UPDATE_LANE:
     return { ...state, [action.lane.id]: action.lane };
-}
    case EDIT_LANE: {
      const lane = { ...state[action.id], editing: true };
      return { ...state, [action.id]: lane };

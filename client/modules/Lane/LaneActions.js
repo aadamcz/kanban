@@ -60,17 +60,6 @@ export function createLanes(lanesData) {
   };
 }
 
-export function createLane(lane) {
-  return {
-    type: CREATE_LANE,
-    lane: {
-      id: uuid(),
-      notes: [],
-      ...lane
-    }
-  };
-}
-
 export function createLaneRequest(lane) {
   return (dispatch) => {
     return callApi('lanes', 'post', lane).then(res => {
